@@ -1,0 +1,25 @@
+{
+  "name": "amplify-js-workflow",
+  "description": "Native app for GitHub issue management for Amplify JS",
+  "version": "1.0.0",
+  "repository": "git@github.com:ericclemmons/amplify-js-workflow.git",
+  "author": "Eric Clemmons <eric@smarterspam.com>",
+  "license": "MIT",
+  "source": "src/index.tsx",
+  "main": "dist/amplify-js-workflow.js",
+  "module": "dist/amplify-js-workflow.module.js",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "microbundle",
+    "postbuild": "nativefier 'https://github.com/aws-amplify/amplify-js/issues' --name 'Amplify JS Workflow' --icon ./src/github.icns --inject ./dist/amplify-js-workflow.js --inject dist/amplify-js-workflow.css ./dist",
+    "postinstall": "$_ run build",
+    "predev": "open './dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app'",
+    "dev": "ln -fs $PWD/dist/amplify-js-workflow.css 'dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app/Contents/Resources/app/inject/inject.css' && ln -fs $PWD/dist/amplify-js-workflow.js 'dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app/Contents/Resources/app/inject/inject.js'",
+    "postdev": "microbundle watch"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0",
+    "nativefier": "^8.0.7",
+    "rimraf": "^3.0.2"
+  }
+}
