@@ -2,6 +2,10 @@
 
 Native app for GitHub issue management for Amplify JS
 
+- Styling via [Primary](https://primer.style/css/utilities/box-shadow)
+- Bundling via [microbundle](https://github.com/developit/microbundle)
+- Packaging via [Nativefier](https://github.com/jiahaog/nativefier)
+
 ## Development
 
 1. `yarn install`
@@ -9,3 +13,5 @@ Native app for GitHub issue management for Amplify JS
 
 - [ ] `yarn publish` should publish to `@ericclemmons/amplify-js-workflow`
 - [ ] Support `npx @ericclemmons/amplify-js-workflow` to run directly
+- [ ] Copy `.map` files to package
+- [ ] Update icon to use Amplify's
