@@ -11,10 +11,10 @@ export function Workflow() {
   useEffect(() => {
     Array.from(
       document.querySelectorAll(
-        '[role="banner"], .repohead, .js-pinned-issues-reorder-container'
+        '[role="banner"], .repohead, .js-pinned-issues-reorder-container, [role=search] + div'
       )
     ).map((element: HTMLElement) => {
-      element.style.display = "none";
+      element.style.setProperty("display", "none", "important");
     });
   }, []);
 
