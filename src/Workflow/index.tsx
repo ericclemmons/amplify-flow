@@ -11,7 +11,7 @@ export function Workflow() {
   useEffect(() => {
     Array.from(
       document.querySelectorAll(
-        '[role="banner"], .repohead, .js-pinned-issues-reorder-container, [role=search] + div'
+        '[role="banner"], .repohead, .js-pinned-issues-reorder-container, [role=search] + div, .protip, .footer'
       )
     ).map((element: HTMLElement) => {
       element.style.setProperty("display", "none", "important");
