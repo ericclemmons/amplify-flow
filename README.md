@@ -2,6 +2,8 @@
 
 Native app for GitHub issue management for Amplify JS
 
+> ![Screenshot](screenshot.png)
+
 - Styling via [Primary](https://primer.style/css/utilities/box-shadow)
 - Bundling via [microbundle](https://github.com/developit/microbundle)
 - Packaging via [Nativefier](https://github.com/jiahaog/nativefier)
