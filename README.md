@@ -17,5 +17,3 @@ _Inspired by [cdk-github-queries](https://github.com/rix0rrr/cdk-github-queries/
 
 - [ ] `yarn publish` should publish to `@ericclemmons/amplify-js-workflow`
 - [ ] Support `npx @ericclemmons/amplify-js-workflow` to run directly
-- [ ] Copy `.map` files to package
-- [ ] Update icon to use Amplify's
