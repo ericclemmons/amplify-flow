@@ -61,18 +61,22 @@ export function Workflow() {
           </Button>
         </ButtonGroup>
 
-        <div class="BtnGroup">
-          <button class="btn BtnGroup-item btn-sm" type="button">
-            Milestone Bugs
-          </button>
-          <button class="btn BtnGroup-item btn-sm" type="button">
-            Milestone Features
-          </button>
-          <button class="btn BtnGroup-item btn-sm" type="button">
-            Unassigned Issues
-          </button>
-        </div>
+        <ButtonGroup>
+          <Button href="issues" query="is:issue is:open label:bug assignee:@me">
+            Bugs
+          </Button>
+          <Button
+            href="issues"
+            query="is:issue is:open -label:bug assignee:@me"
+          >
+            Features
+          </Button>
+          <Button href="issues" query="is:issue is:open no:assignee">
+            Unassigned
+          </Button>
+        </ButtonGroup>
       </div>
+
       <div class="Header-item mr-0">
         <img
           class="avatar"
