@@ -6,16 +6,14 @@
   "author": "Eric Clemmons <eric@smarterspam.com>",
   "license": "MIT",
   "source": "src/index.tsx",
-  "main": "dist/amplify-js-workflow.js",
-  "module": "dist/amplify-js-workflow.module.js",
+  "main": "dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app/Contents/Resources/app/inject/inject.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "microbundle --format cjs",
-    "postbuild": "nativefier 'https://github.com/aws-amplify/amplify-js/issues' --name 'Amplify JS Workflow' --icon ./src/github.icns --inject ./dist/amplify-js-workflow.js --inject dist/amplify-js-workflow.css ./dist",
+    "build": "nativefier 'https://github.com/aws-amplify/amplify-js/issues' --name 'Amplify JS Workflow' --icon ./src/github.icns --inject ./src/index.tsx --inject src/index.css ./dist",
+    "postbuild": "microbundle --format cjs",
     "postinstall": "$_ run build",
     "predev": "open './dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app'",
-    "dev": "ln -fs $PWD/dist/amplify-js-workflow.css 'dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app/Contents/Resources/app/inject/inject.css' && ln -fs $PWD/dist/amplify-js-workflow.js 'dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app/Contents/Resources/app/inject/inject.js'",
-    "postdev": "microbundle watch --format cjs"
+    "dev": "microbundle watch --format cjs"
   },
   "devDependencies": {
     "microbundle": "^0.11.0",
