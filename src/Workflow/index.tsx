@@ -2,9 +2,11 @@ import { h } from "preact";
 import { useEffect } from "preact/hooks";
 
 import { useUserLogin } from "../hooks/useUserLogin";
+import { ButtonGroup } from "./ButtonGroup";
+import { Button } from "./Button";
 
 export function Workflow() {
-  const userLogin = useUserLogin();
+  useUserLogin();
 
   useEffect(() => {
     Array.from(
@@ -15,8 +17,6 @@ export function Workflow() {
       element.style.display = "none";
     });
   }, []);
-
-  console.log({ userLogin });
 
   return (
     <div class="Header box-shadow-large mb-4">
@@ -35,10 +35,44 @@ export function Workflow() {
           <span>Amplify JS</span>
         </a>
       </div>
-      <div class="Header-item">
-        <input type="search" class="form-control input-dark" />
+      <div class="Header-item Header-item--full">
+        <ButtonGroup>
+          <Button
+            href="pulls"
+            query="is:pr is:open sort:updated-desc review-requested:@me"
+            tooltip="Pull Requests needing your attention"
+          >
+            Awaiting Review
+          </Button>
+          <Button
+            href="pulls"
+            query="is:pr is:open sort:updated-desc assignee:@me -author:@me"
+            tooltip="Contributor Pull Requests relying on you"
+          >
+            Shepherd
+          </Button>
+
+          <Button
+            href="pulls"
+            query="is:pr is:open sort:updated-desc author:@me"
+            tooltip="Your Pull Requests"
+          >
+            Finish
+          </Button>
+        </ButtonGroup>
+
+        <div class="BtnGroup">
+          <button class="btn BtnGroup-item btn-sm" type="button">
+            Milestone Bugs
+          </button>
+          <button class="btn BtnGroup-item btn-sm" type="button">
+            Milestone Features
+          </button>
+          <button class="btn BtnGroup-item btn-sm" type="button">
+            Unassigned Issues
+          </button>
+        </div>
       </div>
-      <div class="Header-item Header-item--full">Menu</div>
       <div class="Header-item mr-0">
         <img
           class="avatar"

@@ -9,9 +9,11 @@ document.body.prepend(root);
 
 render(
   <Router>
-    <Route path="issues">
-      <Workflow />
-    </Route>
+    {["issues", "pulls"].map((path) => (
+      <Route key={path} path={path}>
+        <Workflow />
+      </Route>
+    ))}
   </Router>,
   root
 );
