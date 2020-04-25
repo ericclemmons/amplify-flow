@@ -1,11 +1,17 @@
 import { h, render } from "preact";
 
-import { App } from "./App";
+import { Route, Router } from "./Router";
+import { Workflow } from "./Workflow";
 import "./index.css";
 
-const root = document.createElement("nav");
+const root = document.createElement("div");
+document.body.prepend(root);
 
-// document.head.appendChild(tailwind);
-document.querySelector("main").prepend(root);
-
-render(<App />, root);
+render(
+  <Router>
+    <Route path="issues">
+      <Workflow />
+    </Route>
+  </Router>,
+  root
+);
