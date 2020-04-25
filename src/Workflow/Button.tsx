@@ -4,18 +4,16 @@ import { useUserLogin } from "../hooks/useUserLogin";
 
 type Props = {
   href: "issues" | "pulls";
-  query?: string;
+  query: string;
   tooltip?: string;
 };
 
-export function Button({ children, href, query = null, tooltip = null }) {
+export function Button({ children, href, query, tooltip = null }) {
   const userLogin = useUserLogin();
   const [count, setCount] = useState(null);
-  const buttonUrl = new URL(href, document.baseURI);
 
-  if (query) {
-    buttonUrl.searchParams.set("q", query);
-  }
+  const buttonUrl = new URL(href, document.baseURI);
+  buttonUrl.searchParams.set("q", query);
 
   const isActive = buttonUrl.href === window.location.href;
 
