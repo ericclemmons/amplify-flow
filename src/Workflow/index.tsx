@@ -67,16 +67,25 @@ export function Workflow() {
         </ButtonGroup>
 
         <ButtonGroup>
-          <Button href="issues" query="is:issue is:open label:bug assignee:@me">
+          <Button
+            href="issues"
+            query="is:issue is:open label:bug assignee:@me"
+            tooltip="Priority bugs assigned to you"
+          >
             Bugs
           </Button>
           <Button
             href="issues"
             query="is:issue is:open -label:bug assignee:@me"
+            tooltip="Chores & Features assigned to you"
           >
             Features
           </Button>
-          <Button href="issues" query="is:issue is:open no:assignee">
+          <Button
+            href="issues"
+            query="is:issue is:open no:assignee"
+            tooltip="Prioritized issues without an owner"
+          >
             Unassigned
           </Button>
         </ButtonGroup>
