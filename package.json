@@ -11,9 +11,9 @@
     "prebuild": "rimraf dist",
     "build": "nativefier 'https://github.com/aws-amplify/amplify-js/issues' --name 'Amplify JS Workflow' --icon ./src/github.icns --inject ./src/index.tsx --inject src/index.css ./dist",
     "postbuild": "microbundle --format cjs",
-    "postinstall": "$_ run build",
-    "predev": "open './dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app'",
-    "dev": "microbundle watch --format cjs"
+    "predev": "$_ run build",
+    "dev": "open './dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app'",
+    "postdev": "microbundle watch --format cjs"
   },
   "devDependencies": {
     "microbundle": "^0.11.0",
