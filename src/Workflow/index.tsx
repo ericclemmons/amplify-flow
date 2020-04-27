@@ -64,9 +64,7 @@ export function Workflow() {
           >
             Finish
           </Button>
-        </ButtonGroup>
 
-        <ButtonGroup>
           <Button
             href="issues"
             query="is:issue is:open label:bug assignee:@me"
