@@ -24,7 +24,7 @@ export function Workflow() {
   }, []);
 
   return (
-    <div class="Header box-shadow-large mb-4">
+    <div id="amplify-js-workflow" class="Header box-shadow-large mb-4">
       <div class="Header-item">
         <a
           href="https://github.com/aws-amplify/amplify-js/issues"

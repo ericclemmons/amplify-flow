@@ -21,7 +21,7 @@ export function Button({ children, href, query, tooltip = null }) {
       class={[
         "btn BtnGroup-item btn-sm",
         tooltip ? "tooltipped tooltipped-s" : null,
-        isActive ? "btn-outline" : null,
+        isActive ? "btn-blue" : null,
       ]
         .filter(Boolean)
         .join(" ")}

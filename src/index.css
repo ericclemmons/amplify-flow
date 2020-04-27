@@ -1,1 +1,32 @@
-/* Placeholder for global CSS */
+#amplify-js-workflow .BtnGroup .btn:nth-of-type(1) {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% + -8px) 0%,
+    100% 50%,
+    calc(100% + -8px) 100%,
+    0% 100%
+  );
+  padding-left: 10px;
+  padding-right: 18px;
+}
+
+#amplify-js-workflow .BtnGroup .btn {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% + -8px) 0%,
+    100% 50%,
+    calc(100% + -8px) 100%,
+    0% 100%,
+    8px 50%
+  );
+  margin-right: -6px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+#amplify-js-workflow .BtnGroup .btn:nth-last-of-type(1) {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 8px 50%);
+  padding-left: 18px;
+  padding-right: 10px;
+  margin-right: auto;
+}
