@@ -1,5 +1,11 @@
 # gh-flow
 
+## 1.0.6
+
+### Patch Changes
+
+- Fix npx amplify-flow
+
 ## 1.0.5
 
 ### Patch Changes
