@@ -1,7 +1,7 @@
 {
   "name": "amplify-flow",
   "description": "Native app for GitHub issue management for Amplify JS",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "git@github.com:ericclemmons/amplify-js-workflow.git",
   "author": "Eric Clemmons <eric@smarterspam.com>",
   "license": "MIT",
