@@ -16,6 +16,7 @@
     "postdev": "microbundle watch --format cjs"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.6.5",
     "microbundle": "^0.11.0",
     "nativefier": "^8.0.7",
     "preact": "^10.4.1",
