@@ -1,5 +1,11 @@
 # gh-flow
 
+## 1.0.5
+
+### Patch Changes
+
+- Add missing binary
+
 ## 1.0.4
 
 ### Patch Changes
