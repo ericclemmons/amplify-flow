@@ -1,4 +1,4 @@
-# amplify-js-workflow
+# GH Flow
 
 Native app for GitHub issue management for Amplify JS
 

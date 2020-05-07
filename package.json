@@ -1,18 +1,18 @@
 {
-  "name": "amplify-js-workflow",
+  "name": "gh-flow",
   "description": "Native app for GitHub issue management for Amplify JS",
   "version": "1.0.0",
   "repository": "git@github.com:ericclemmons/amplify-js-workflow.git",
   "author": "Eric Clemmons <eric@smarterspam.com>",
   "license": "MIT",
   "source": "src/index.tsx",
-  "main": "dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app/Contents/Resources/app/inject/inject.js",
+  "main": "dist/GH Flow-darwin-x64/GH Flow.app/Contents/Resources/app/inject/inject.js",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nativefier 'https://github.com/aws-amplify/amplify-js/issues' --name 'Amplify JS Workflow' --icon ./src/github.icns --inject ./src/index.tsx --inject src/index.css ./dist",
+    "build": "nativefier 'https://github.com/aws-amplify/amplify-js/issues' --name 'GH Flow' --icon ./src/github.icns --inject ./src/index.tsx --inject src/index.css ./dist",
     "postbuild": "microbundle --format cjs",
     "predev": "$_ run build",
-    "dev": "open './dist/Amplify JS Workflow-darwin-x64/Amplify JS Workflow.app'",
+    "dev": "open './dist/GH Flow-darwin-x64/GH Flow.app'",
     "postdev": "microbundle watch --format cjs"
   },
   "devDependencies": {
