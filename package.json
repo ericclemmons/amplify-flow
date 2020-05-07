@@ -8,6 +8,9 @@
   "source": "src/index.tsx",
   "main": "dist/GH Flow-darwin-x64/GH Flow.app/Contents/Resources/app/inject/inject.js",
   "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nativefier 'https://github.com/aws-amplify/amplify-js/issues' --name 'GH Flow' --icon ./src/github.icns --inject ./src/index.tsx --inject src/index.css ./dist",
