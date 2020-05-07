@@ -7,7 +7,7 @@
   "license": "MIT",
   "source": "src/index.tsx",
   "main": "dist/Amplify Flow-darwin-x64/Amplify Flow.app/Contents/Resources/app/inject/inject.js",
-  "bin": "./bin/amplify-flow.sh",
+  "bin": "./bin/amplify-flow.js",
   "files": [
     "bin",
     "dist"
@@ -33,5 +33,8 @@
     "nativefier": "^8.0.7",
     "preact": "^10.4.1",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "open": "^7.0.3"
   }
 }
