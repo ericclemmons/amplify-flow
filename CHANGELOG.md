@@ -1,5 +1,11 @@
 # gh-flow
 
+## 1.0.4
+
+### Patch Changes
+
+- Add amplify-flow binary
+
 ## 1.0.3
 
 ### Patch Changes

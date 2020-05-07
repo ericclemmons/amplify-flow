@@ -1,13 +1,16 @@
 {
   "name": "amplify-flow",
   "description": "Native app for GitHub issue management for Amplify JS",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": "git@github.com:ericclemmons/amplify-js-workflow.git",
   "author": "Eric Clemmons <eric@smarterspam.com>",
   "license": "MIT",
   "source": "src/index.tsx",
   "main": "dist/Amplify Flow-darwin-x64/Amplify Flow.app/Contents/Resources/app/inject/inject.js",
-  "files": ["dist"],
+  "files": [
+    "bin",
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -17,9 +20,12 @@
     "postbuild": "microbundle --format cjs",
     "predev": "$_ run build",
     "dev": "open './dist/Amplify Flow-darwin-x64/Amplify Flow.app'",
-    "postdev": "microbundle watch --format cjs"
+    "postdev": "microbundle watch --format cjs",
+    "prerelease": "yarn build",
+    "release": "yarn changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.2.5",
     "@changesets/cli": "^2.6.5",
     "microbundle": "^0.11.0",
     "nativefier": "^8.0.7",
