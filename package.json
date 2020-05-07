@@ -23,7 +23,8 @@
     "dev": "open './dist/Amplify Flow-darwin-x64/Amplify Flow.app'",
     "postdev": "microbundle watch --format cjs",
     "prerelease": "yarn build",
-    "release": "yarn changeset publish"
+    "release": "yarn changeset publish",
+    "postrelease": "git push --follow-tags"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.2.5",
