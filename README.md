@@ -14,6 +14,3 @@ _Inspired by [cdk-github-queries](https://github.com/rix0rrr/cdk-github-queries/
 
 1. `yarn install`
 1. `yarn dev`
-
-- [ ] `yarn publish` should publish to `@ericclemmons/amplify-js-workflow`
-- [ ] Support `npx @ericclemmons/amplify-js-workflow` to run directly
